@@ -1,20 +1,21 @@
-import Link from "next/link"
+import { getCollections } from "app/services/shopify/collections";
+import Link from "next/link";
 
+export default async function Layout({children}: {children: React.ReactNode}) {
+  const collections = await getCollections();
 
-const layout = ({children}: {children: React.ReactNode}) => {
   return (
     <main>
-      <ul className="md:flex justify-around text-center my-5">
-        <Link href="">
-          <li>Polerones para Hombre</li>
-        </Link>
-        <Link href="">
-          <li>Polerones para Niño</li>
-        </Link>
-      </ul>
+      <nav className="flex justify-around my-5">
+        {
+          collections.map((el: any) => (
+            <Link key={el.id} href={"/store/" + el.handle}>
+              {el.title}
+            </Link>
+          ))
+        }
+      </nav>
       {children}
     </main>
   )
 }
-
-export default layout

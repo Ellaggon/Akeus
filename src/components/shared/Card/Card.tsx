@@ -6,7 +6,7 @@ const PLACEHOLDER_IMAGE =
 
 export const Card = () => {
   return (
-    <div className="bg-white text-black md:rounded-lg h-60 relative">
+    <div className="bg-white text-black md:rounded-lg h-60 relative cursor-pointer">
       <Image
         className="object-cover md:rounded-lg h-full"
         src="/images/img3(5).jpeg"

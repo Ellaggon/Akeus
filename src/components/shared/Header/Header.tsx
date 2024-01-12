@@ -8,7 +8,7 @@ export const Header = () => {
           <div>Akeus</div>
         </Link>
         <ul className="flex justify-evenly gap-5">
-          <Link href="/store">
+          <Link href="/">
             <li>Inicio</li>
           </Link>
           <Link href="/store">
