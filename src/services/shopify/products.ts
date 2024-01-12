@@ -31,6 +31,7 @@ export const getProducts = async (id?: string): Promise<ProductType[]> => {
   } catch (err) {
     console.log(err);
   }
+  return []
 };
 
 export const getMainProducts = async () => {
