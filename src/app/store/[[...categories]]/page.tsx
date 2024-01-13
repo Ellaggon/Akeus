@@ -16,8 +16,6 @@ export default async function Category(props: CategoryProps) {
   const { categories } = props.params;
   let products = [];
   const collections = await getCollections();
-  console.log(categories);
-  console.log(collections);
 
   if (categories?.length > 0) {
     const selectedCollectionId = collections.find(
@@ -28,7 +26,6 @@ export default async function Category(props: CategoryProps) {
     products = await getProducts();
   }
 
-  console.log(products)
   return (
     <div>
       <ProductsWrapper products={products} />
