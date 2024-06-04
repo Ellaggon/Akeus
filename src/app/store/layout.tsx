@@ -5,7 +5,7 @@ export default async function Layout({children}: {children: React.ReactNode}) {
   const collections = await getCollections();
 
   return (
-    <main>
+    <>
       <nav className="flex justify-around my-5">
         {
           collections.map((el: any) => (
@@ -16,6 +16,6 @@ export default async function Layout({children}: {children: React.ReactNode}) {
         }
       </nav>
       {children}
-    </main>
+    </>
   )
 }

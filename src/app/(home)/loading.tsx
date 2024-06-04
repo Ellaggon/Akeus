@@ -1,9 +1,7 @@
 import { Loader } from "app/components/shared/Loader"
 
-const loading = () => {
+export default function Loading() {
   return (
-    <Loader />
+    <Loader />
   )
 }
-
-export default loading

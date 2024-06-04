@@ -1,16 +1,16 @@
+
 import Link from "next/link";
+import { Modal } from "../Modal";
 
 export const Header = () => {
   return (
-    <header>
+      <header>
       <nav className="flex justify-between p-3">
         <Link href="/">
           <div>Akeus</div>
         </Link>
         <ul className="flex justify-evenly gap-5">
-          <Link href="/">
-            <li>Inicio</li>
-          </Link>
+          <Modal />
           <Link href="/store">
             <li>Productos</li>
           </Link>

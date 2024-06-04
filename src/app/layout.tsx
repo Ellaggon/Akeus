@@ -1,11 +1,12 @@
-import { Philosopher } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Header } from "app/components/shared/Header/Header";
 import { Footer } from "app/components/shared/Footer/Footer";
+import { Providers } from "./Providers";
 
-const philosopher = Philosopher({ 
-  weight: ["400", "700"],
-  subsets: ["latin"], 
+const roboto = Roboto({
+  weight: ["300", "500", "700"],
+  subsets: ["latin"],
 });
 
 export default function RootLayout({
@@ -15,10 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={philosopher.className}>
-        <Header />
-        {children}
-        <Footer />
+      <body className={roboto.className}>
+        <Providers>
+          <Header />
+            {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
