@@ -55,6 +55,7 @@ export const ProductViewItemOrder = ({maxQuantity}: ProductViewItemOrderProps) =
           </svg>
           <span>Add to cart</span>
         </button>
+        
       </form>
     </article>
   );
