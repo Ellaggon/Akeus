@@ -2,7 +2,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Header } from "app/components/shared/Header/Header";
 import { Footer } from "app/components/shared/Footer/Footer";
-import { Providers } from "./Providers";
+import Providers from "./Providers";
 
 const roboto = Roboto({
   weight: ["300", "500", "700"],
