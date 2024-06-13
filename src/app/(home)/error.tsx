@@ -13,7 +13,7 @@ export default function Error({ error, reset }: ErrorProps) {
   useEffect(() => {
     console.log(error)
   
-  }, [])
+  }, [error])
   
   return (
     <article className="flex items-center flex-col md:mx-20 lg:mx-48 mt-5">
