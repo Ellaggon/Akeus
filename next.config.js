@@ -1,5 +1,6 @@
 /** @type {import("next").NextConfig} */
 
+const { hostname } = require("os")
 const path = require("path")
 
 const nextConfig = {
@@ -8,6 +9,10 @@ const nextConfig = {
       {
         hostname: "cdn.shopify.com",
         protocol: "https",
+      },
+      {
+        hostname: "lh3.googleusercontent.com",
+        protocol: "https"
       }
     ]
   }
