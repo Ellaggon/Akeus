@@ -12,7 +12,7 @@ export const MainProducts = async () => {
             const imageSrc = el.images?.[0]?.src;
 
             return (
-              <article key={el.id} className="relative h-80 flex justify-center items-center opacity-60">
+              <article key={el.id} className="relative h-80 flex justify-center items-center opacity-60 -z-10">
                 <p className="absolute top-3 right-3 z-10 text-xl font-bold">{el.title }</p>
                 {
                   imageSrc && <Image src={imageSrc} alt={el.title} fill loading="eager" className="object-cover cursor-pointer"></Image>

@@ -12,23 +12,25 @@ export const ProductCard = ({ product }: ProductCardInterface) => {
       className="hover:text-gray-300 flex justify-center mx-4"
     >
       <article className="min-h-64 relative ">
-        {product.image && (
-          <Image
+        {
+          product.image ? (<Image
             src={product.image}
             alt={product.title}
             quality={80}
             width={320}
             height={320}
             loading="eager"
-          ></Image>
-        )}
+          ></Image>) : (
+            <Image width={320} height={320} src="/images/errorimg.jpeg" alt="" quality={80}></Image>
+          )
+        }
         <div className="p-3 border-gray-300 rounded-b">
           <h3>{product.title}</h3>
           <h3>{product.price} $</h3>
         </div>
         <button className="bg-black-500 text-white px-2 py-1 absolute top-0.5 left-0.5 transform-rotate-5 rounded">
           <svg
-            className="w-7 h-7 text-yellow-500 bg-black rounded p-0.5"
+            className="w-7 h-7 text-yellow-500 bg-black rounded p-1 pt-0.5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
